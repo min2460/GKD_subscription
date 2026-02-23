@@ -58,9 +58,9 @@ export default defineGkdApp({
           key: 0,
           fastQuery: true,
           activityIds: [
-            'info.muge.appshare.view.app.detail.AppDetailActivity',
-            'info.muge.appshare.view.app.detail.v4.AppDetailV4Activity',
-            'info.muge.appshare.view.search.v4.SearchActivity',
+            '.view.app.detail.AppDetailActivity',
+            '.view.app.detail.v4.AppDetailV4Activity',
+            '.view.search.v4.SearchActivity',
           ],
           matches:
             'FrameLayout[childCount=5] > @FrameLayout[childCount=1][visibleToUser=true][width<50 && height<50] > ImageView[childCount=0] <<n [vid="adContainer" || vid="adView" || vid="cardAd"]',
@@ -120,7 +120,7 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
-          activityIds: 'info.muge.appshare.view.app.detail.AppDetailActivity',
+          activityIds: '.view.app.detail.AppDetailActivity',
           matches:
             'FrameLayout[childCount=3] >3 [desc^="dislike"] > @View[clickable=true] <<n [id="info.muge.appshare:id/adContainer"]',
           exampleUrls:
@@ -130,7 +130,7 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          activityIds: 'info.muge.appshare.view.app.detail.AppDetailActivity',
+          activityIds: '.view.app.detail.AppDetailActivity',
           matches:
             'FrameLayout[childCount=3] >2 WebView >6 @View[visibleToUser=true] > Image <<n [vid="adContainer"]',
           exampleUrls:
@@ -161,14 +161,18 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/24541525',
           excludeSnapshotUrls: 'https://i.gkd.li/i/24612044',
         },
+        {
+          key: 4,
+          activityIds: '.MainActivity',
+          matches:
+            '@Image[id=null][desc=null][width<60][visibleToUser=true] < View -2 View >3 [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/i/25484564',
+        },
 
         {
           preKeys: [0, 1, 2, 3],
           fastQuery: true,
-          activityIds: [
-            'info.muge.appshare.view.app.detail.AppDetailActivity',
-            '.MainActivity',
-          ],
+          activityIds: ['.view.app.detail.AppDetailActivity', '.MainActivity'],
           matches: '@[clickable=true] >(1,2) [text="不感兴趣"]',
           exampleUrls:
             'https://m.gkd.li/57941037/27a5eebc-a55a-466e-85f3-7642c23b4b3d',
@@ -195,7 +199,7 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          activityIds: 'info.muge.appshare.view.main.MainActivity',
+          activityIds: '.view.main.MainActivity',
           matches:
             '@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null] <2 FrameLayout[childCount=5] + FrameLayout[childCount=2] > [text^="立即" || text$="详情" || text^="了解" || text="去逛逛" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"]',
           exampleUrls: 'https://e.gkd.li/f89eea71-55f0-4c27-a4b0-79ac5296becd',
@@ -235,7 +239,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'info.muge.appshare.view.main.MainActivity',
+          activityIds: '.view.main.MainActivity',
           matches: '[vid="tvSure"][clickable=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/8b782da0-1501-4839-a19b-92209b4d2723',
@@ -250,8 +254,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds:
-            'info.muge.appshare.view.browser.DownloadBrowserActivity',
+          activityIds: '.view.browser.DownloadBrowserActivity',
           matches: '[text="浏览器打开"]',
           exampleUrls:
             'https://m.gkd.li/57941037/aae3c59c-8eac-452c-984e-84ee9b97e986',
@@ -268,7 +271,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'info.muge.appshare.view.main.MainActivity',
+          activityIds: '.view.main.MainActivity',
           matches: '@[vid="tvCancel"] + [vid="tvUpdate"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/25123777',
         },

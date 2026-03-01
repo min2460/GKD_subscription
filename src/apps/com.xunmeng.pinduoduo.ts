@@ -65,7 +65,7 @@ export default defineGkdApp({
         {
           key: 4,
           fastQuery: true,
-          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          activityIds: '.ui.activity.HomeActivity',
           matches:
             '@ViewGroup[clickable=true] - ViewGroup[childCount=3] >2 [text="其他"]',
           snapshotUrls: 'https://i.gkd.li/i/15103543',
@@ -73,7 +73,7 @@ export default defineGkdApp({
         {
           key: 5,
           fastQuery: true,
-          activityIds: 'com.xunmeng.pinduoduo.activity.NewPageMaskActivity',
+          activityIds: '.activity.NewPageMaskActivity',
           matches: [
             '[text="继续拼单"]',
             '@[clickable=true] > [text="先去逛逛"]',
@@ -130,7 +130,7 @@ export default defineGkdApp({
         {
           key: 11,
           fastQuery: true,
-          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          activityIds: '.ui.activity.HomeActivity',
           matches:
             '@ViewGroup[width<86 && height<86][clickable=true][focusable=true][clickable=true] + ViewGroup [text="元"]',
           snapshotUrls: 'https://i.gkd.li/i/25572172',
@@ -141,7 +141,7 @@ export default defineGkdApp({
       key: 6,
       name: '局部广告-悬浮广告',
       desc: '点击关闭',
-      activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+      activityIds: '.ui.activity.HomeActivity',
       rules: [
         {
           key: 0,
@@ -158,7 +158,7 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          activityIds: '.ui.activity.HomeActivity',
           matches:
             'RelativeLayout[childCount=2] > RelativeLayout[vid="pdd"] + @FrameLayout[childCount=1][clickable=true][visibleToUser=true][text=null][vid="pdd"] > ImageView[childCount=0][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/0f850878-2b6a-46c7-86aa-28329df0993c',
@@ -180,7 +180,7 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.xunmeng.pinduoduo.activity.NewPageActivity',
+          activityIds: '.activity.NewPageActivity',
           matches: '[vid="iv_float_window_close"]',
           exampleUrls: 'https://e.gkd.li/f81a45e4-09b4-498f-be72-ca84cdd0db83',
           snapshotUrls: 'https://i.gkd.li/i/14549415',
@@ -193,7 +193,7 @@ export default defineGkdApp({
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,
-      activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+      activityIds: '.ui.activity.HomeActivity',
       rules: [
         {
           key: 0,
@@ -220,7 +220,7 @@ export default defineGkdApp({
       name: '全屏广告-多多视频划到广告自动跳过',
       desc: '点击返回自动刷新，从而跳过广告',
       fastQuery: true,
-      activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+      activityIds: '.ui.activity.HomeActivity',
       rules: [
         {
           key: 0,
@@ -246,8 +246,7 @@ export default defineGkdApp({
       fastQuery: true,
       rules: [
         {
-          activityIds:
-            'com.xunmeng.pinduoduo.app_album.album.MultiImageSelectorActivity',
+          activityIds: '.app_album.album.MultiImageSelectorActivity',
           matches: '@[text="原图"][checked=false] + [text="发送"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13925378', // checked=false
@@ -264,8 +263,8 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: [
-            'com.xunmeng.pinduoduo.activity.NewPageMaskActivity',
-            'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+            '.activity.NewPageMaskActivity',
+            '.ui.activity.HomeActivity',
           ],
           action: 'clickCenter',
           matches: 'Button[text="关闭弹窗" || desc="关闭弹窗"][clickable=true]',
@@ -341,7 +340,7 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          activityIds: '.ui.activity.HomeActivity',
           matches: ['[text="个性化推荐未开启"]', '[text="取消"]'],
           exampleUrls: 'https://e.gkd.li/816070f2-035d-4702-87e3-441cca8b5430',
           snapshotUrls: 'https://i.gkd.li/i/14964851',

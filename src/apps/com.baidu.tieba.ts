@@ -435,6 +435,14 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18217417',
           ],
         },
+        {
+          key: 3,
+          activityIds: '.forum.ForumActivity',
+          matches:
+            'ImageView[index=parent.childCount.minus(1)] < @[vid="obfuscated"][clickable=true] -n * < RelativeLayout + FrameLayout [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/i/25710401',
+          exampleUrls: 'https://e.gkd.li/511c57bc-e11a-43b3-b4a3-9b49cf79d509',
+        },
       ],
     },
     {

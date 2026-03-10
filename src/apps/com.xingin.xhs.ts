@@ -381,7 +381,7 @@ export default defineGkdApp({
     },
     {
       key: 15,
-      name: '分段广告-Live卡Ad',
+      name: '分段广告-直播卡片Ad',
       desc: '长按"直播中"标识的卡片-点"不喜欢"',
       fastQuery: true,
       activityIds: '.index.v2.IndexActivityV2',

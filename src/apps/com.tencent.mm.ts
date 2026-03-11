@@ -233,10 +233,11 @@ export default defineGkdApp({
           matchRoot: true,
           activityIds: '.plugin.luckymoney.ui.LuckyMoney',
           matches:
-            '@Button[desc="开" || desc="開"] -3 LinearLayout >2 [text$="红包" || text$="紅包"]',
+            '@Button[desc="开" || desc="開"] -(2,3) LinearLayout >2 [text$="红包" || text$="紅包"]',
           snapshotUrls: [
             'https://i.gkd.li/i/18134828',
             'https://i.gkd.li/i/21177180',
+            'https://i.gkd.li/i/25901145',
             'https://i.gkd.li/i/25315061', //zh_TW
           ],
           excludeSnapshotUrls: 'https://i.gkd.li/i/12567698', // 金币动画的快照

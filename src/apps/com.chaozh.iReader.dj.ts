@@ -203,5 +203,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '全屏广告-红包弹窗',
+      desc: 'x掉',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.zhangyue.iReader.bookshelf.ui.ActivityBookShelf',
+          matches: [
+            '[text$="红包"]',
+            '[vid="Id_withdraw_close"][clickable=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/25996310',
+        },
+      ],
+    },
   ],
 });

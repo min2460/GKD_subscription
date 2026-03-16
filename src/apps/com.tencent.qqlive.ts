@@ -440,10 +440,11 @@ export default defineGkdApp({
     },
     {
       key: 23,
-      name: '其他-视频播放时的评价悬浮窗',
+      name: '评价提示-视频播放界面的评价悬浮窗',
       desc: '点击关闭',
       rules: [
         {
+          key: 0,
           actionDelay: 1000,
           fastQuery: true,
           activityIds: '.ona.activity.VideoDetailActivity',
@@ -451,6 +452,13 @@ export default defineGkdApp({
             '@View[clickable=true] + RecyclerView[childCount=5] > ViewGroup[childCount=2] > TextView[text="不推荐"][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/b10125fa-5b1f-4a64-b258-392c57f4a1d8',
           snapshotUrls: 'https://i.gkd.li/i/20271517',
+        },
+        {
+          key: 1,
+          activityIds: '.kmm.VideoDetailKmmActivityBk',
+          matches:
+            '@View[clickable=true][width<80 && height<80] + [text^="我认为"]',
+          snapshotUrls: 'https://i.gkd.li/i/26016085',
         },
       ],
     },

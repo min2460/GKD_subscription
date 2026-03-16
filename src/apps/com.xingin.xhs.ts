@@ -403,5 +403,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 16,
+      name: '功能类-设备登入自动确认',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.xingin.reactnative.ui.XhsReactActivity',
+          matches:
+            'ViewGroup > [text="登录确认"] +6 @[clickable=true] > [text="确认登录"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/26029586',
+          exampleUrls: 'https://e.gkd.li/dfc35798-6ab3-4941-bf23-572de9f3a19c',
+        },
+      ],
+    },
   ],
 });

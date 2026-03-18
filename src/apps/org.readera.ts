@@ -45,5 +45,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '评价提示',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: [
+            '[text="评价此应用"]',
+            '[text="不了，谢谢"][clickable=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/26088076',
+        },
+      ],
+    },
   ],
 });

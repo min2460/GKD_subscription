@@ -259,13 +259,6 @@ export default defineGkdApp({
           matches: ['[text="立即升级"]', '[text="稍后处理"]'],
           snapshotUrls: 'https://i.gkd.li/i/14724108',
         },
-        {
-          key: 2,
-          fastQuery: true,
-          activityIds: '.activity.SplashActivity',
-          matches: '@[desc="关闭"][clickable=true] - [text="点击更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/26159150',
-        },
       ],
     },
     {

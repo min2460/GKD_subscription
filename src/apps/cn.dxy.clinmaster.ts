@@ -42,5 +42,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '评价提示',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.home.MainActivity',
+          matches:
+            '[text="以后"][visibleToUser=true] < @View[clickable=true] <3 View[childCount=4] <<6 [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/26181264',
+          exampleUrls: 'https://e.gkd.li/3bc23861-5be3-4efe-a7c0-386d91ef7de7',
+        },
+      ],
+    },
   ],
 });

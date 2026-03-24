@@ -56,5 +56,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '权限提示-安装未知应用',
+      desc: '不允许, 点击[稍后]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'org.telegram.ui.LaunchActivity',
+          matches: [
+            '[text^="此应用已被限制安装 APK"]',
+            '[text="稍后"][clickable=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/26217948',
+        },
+      ],
+    },
   ],
 });

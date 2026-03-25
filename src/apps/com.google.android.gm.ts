@@ -22,7 +22,7 @@ export default defineGkdApp({
           preKeys: [1],
           key: 2,
           name: '②点击[屏蔽]',
-          action: 'clickCenter' // 此界面不接受无障碍事件
+          action: 'clickCenter', // 此界面不接受无障碍事件
           matches:
             '@Button[clickable=true][text="屏蔽此广告" || text^="Block" || desc="屏蔽"] <<n [vid="my_ad_center_dialog"]',
           snapshotUrls: [

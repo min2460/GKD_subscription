@@ -764,5 +764,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 31,
+      name: '局部广告-会员购',
+      desc: '底部横幅Ad',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.MainActivityV2',
+          matches:
+            '[vid="home_coordinatorLayout"] > LinearLayout[childCount=2] > @[vid$="_coupon_close"][clickable=true] + [vid="mall_home_newuser_coupon"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/26240948',
+          exampleUrls: 'https://e.gkd.li/027bbea9-3479-4c8c-a0b2-88fee8f03a85',
+        },
+      ],
+    },
   ],
 });

@@ -35,7 +35,7 @@ export default defineGkdApp({
             '.MainActivityV2',
           ],
           matches:
-            'LinearLayout[id="tv.danmaku.bili:id/ad_tint_frame"] > ImageView[id="tv.danmaku.bili:id/close"][desc="关闭"]',
+            'LinearLayout[vid="ad_tint_frame"] > ImageView[vid="close"][desc="关闭"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12785461',
             'https://i.gkd.li/i/12775156',
@@ -52,7 +52,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: '[id="tv.danmaku.bili:id/ad_goods_mark_big"]',
+          matches: '[vid="ad_goods_mark_big"]',
           snapshotUrls: 'https://i.gkd.li/i/12700222',
         },
         {
@@ -85,7 +85,7 @@ export default defineGkdApp({
         },
         {
           preKeys: [1],
-          matches: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
+          matches: '[vid="update_btn_cancel"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12649689',
             'https://i.gkd.li/i/13212209',
@@ -108,7 +108,7 @@ export default defineGkdApp({
             'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
             'com.bilibili.video.videodetail.VideoDetailsActivity',
           ],
-          matches: '[id="tv.danmaku.bili:id/toast_x"]',
+          matches: '[vid="toast_x"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12892611',
             'https://i.gkd.li/i/13308344',
@@ -185,7 +185,7 @@ export default defineGkdApp({
             'com.bilibili.video.story.StoryTransparentActivity',
             'com.bilibili.teenagersmode.ui.TeenagersModeDialogActivity',
           ],
-          matches: '[text$="通知"] +2 * > [id="tv.danmaku.bili:id/close"]',
+          matches: '[text$="通知"] +2 * > [vid="close"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13229159',
             'https://i.gkd.li/i/13614090',
@@ -272,8 +272,7 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: '.MainActivityV2',
-          matches:
-            '[text="开启个性化内容推荐"] +3 [id="tv.danmaku.bili:id/close_button"]',
+          matches: '[text="开启个性化内容推荐"] +3 [vid="close_button"]',
           snapshotUrls: 'https://i.gkd.li/i/13448905',
         },
       ],

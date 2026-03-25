@@ -86,5 +86,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '局部广告',
+      rules: [
+        {
+          activityIds: '.MainActivity',
+          matchTime: 18000,
+          resetMatch: 'app',
+          matches:
+            '[text="获取 Plus"] < View + @View[clickable=true][childCount=2] > [desc="关闭"] + Button',
+          snapshotUrls: 'https://i.gkd.li/i/26234095',
+          exampleUrls: 'https://e.gkd.li/dd8a2887-ea64-466d-b270-de7568b55af4',
+        },
+      ],
+    },
   ],
 });

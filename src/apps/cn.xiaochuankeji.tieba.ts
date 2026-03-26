@@ -65,7 +65,7 @@ export default defineGkdApp({
         {
           activityIds: '.ui.home.setting.SettingActivity',
           matches:
-            '[id="cn.xiaochuankeji.tieba:id/btn_ok"][text^="马上升级"] + [id="cn.xiaochuankeji.tieba:id/btn_cancel"][text="取消"]',
+            '[vid="btn_ok"][text^="马上升级"] + [vid="btn_cancel"][text="取消"]',
           snapshotUrls: 'https://i.gkd.li/i/12660882',
         },
       ],
@@ -78,8 +78,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches:
-            '@[vid="iv_close"] <<n [vid="ad_container"][visibleToUser=true]',
+          matches: '[vid="adLabelView"] + [vid="iv_close"][clickable=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/24209546',
             'https://i.gkd.li/i/24380002',
@@ -104,13 +103,12 @@ export default defineGkdApp({
         {
           key: 1,
           matches:
-            '[id="cn.xiaochuankeji.tieba:id/confirm"][text="打开通知"] + [id="cn.xiaochuankeji.tieba:id/cancel"][text="暂不开启"]',
+            '[vid="confirm"][text="打开通知"] + [vid="cancel"][text="暂不开启"]',
           snapshotUrls: 'https://i.gkd.li/i/12660823',
         },
         {
           key: 2,
-          matches:
-            '[text^="开启通知"] +(2) [id="cn.xiaochuankeji.tieba:id/tips_close"]',
+          matches: '[text^="开启通知"] +2 [vid="tips_close"]',
           snapshotUrls: 'https://i.gkd.li/i/12660851',
         },
       ],

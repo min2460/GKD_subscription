@@ -171,8 +171,11 @@ export default defineGkdApp({
           key: 2,
           fastQuery: true,
           activityIds: '.mvi.home.HomeActivity',
-          matches: '[vid="ksad_ad_dislike"]',
-          snapshotUrls: 'https://i.gkd.li/i/23054142',
+          matches: '[vid="ksad_ad_dislike" || vid="tianmu_suspend_iv_close"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23054142',
+            'https://i.gkd.li/i/26307793',
+          ],
         },
         {
           key: 3,

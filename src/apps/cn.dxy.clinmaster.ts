@@ -30,9 +30,9 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '@[text="翻译"][visibleToUser=true] < View[index=parent.childCount.minus(1)] <n View <2 * <2 * <<4 View <2 * < * < ComposeView < [id="android:id/content"]',
+            '@[text="翻译"][visibleToUser=true] < View[index=parent.childCount.minus(1)] -n * < View <2 * - [id="root"] <<5 * - View <<4 [id="android:id/content"]',
           excludeMatches:
-            '@[text="已翻译"][visibleToUser=true] < View[index=parent.childCount.minus(1)] <n View <2 * <2 * <<4 View <2 * < * < ComposeView < [id="android:id/content"]',
+            '@[text="已翻译"][visibleToUser=true] < View[index=parent.childCount.minus(1)] -n * < View <2 * - [id="root"] <<5 * - View <<4 [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/26181124',
           excludeSnapshotUrls: 'https://i.gkd.li/i/26181123',
           exampleUrls: [

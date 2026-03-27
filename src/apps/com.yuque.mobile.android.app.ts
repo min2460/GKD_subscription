@@ -6,7 +6,7 @@ export default defineGkdApp({
   groups: [
     {
       key: 0,
-      name: '局部广告-"用语雀公众号"横幅提示',
+      name: '局部广告-[用语雀公众号]横幅提示',
       desc: '点x取消提示',
       rules: [
         {

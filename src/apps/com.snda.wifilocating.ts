@@ -87,7 +87,7 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '局部广告-“我的”界面广告卡片',
+      name: '局部广告-[我的]界面广告卡片',
       rules: [
         {
           key: 0,

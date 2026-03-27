@@ -20,19 +20,18 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '功能类-退出软件时点击"退出程序"',
+      name: '功能类-自动确认[退出]',
+      desc: '退出软件时点击[退出程序]',
+      fastQuery: true,
+      activityIds: 'com.remote.cn.MainActivity',
       rules: [
         {
           key: 0,
-          fastQuery: true,
-          activityIds: 'com.remote.cn.MainActivity',
-          matches: '[text="退出程序"]',
+          matches: '[text="退出程序"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/14047538',
         },
         {
           key: 1,
-          fastQuery: true,
-          activityIds: 'com.remote.cn.MainActivity',
           matches:
             '@Button[desc="退出程序"] <4 View < View < View < View < FrameLayout < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/24852663',

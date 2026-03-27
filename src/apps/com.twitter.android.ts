@@ -226,7 +226,7 @@ export default defineGkdApp({
     },
     {
       key: 7,
-      name: '功能类-自动点击"显示更多帖子"',
+      name: '功能类-自动点击[显示更多帖子]',
       rules: [
         {
           fastQuery: true,
@@ -266,7 +266,7 @@ export default defineGkdApp({
     },
     {
       key: 10,
-      name: '功能类-‘保存’图片帖子',
+      name: '功能类-[保存]图片帖子',
       desc: '展开菜单自动点击保存图片',
       rules: [
         {

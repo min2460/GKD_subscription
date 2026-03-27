@@ -43,8 +43,8 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '功能类-"签到成功"弹窗',
-      desc: '点击"好的"',
+      name: '功能类-[签到成功]弹窗',
+      desc: '点击[好的]',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',

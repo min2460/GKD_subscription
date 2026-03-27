@@ -44,7 +44,8 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '局部广告-关闭「您有一张亲友卡待赠送」通知条',
+      name: '局部广告-底部横幅广告',
+      desc: 'x掉[亲友卡待赠送]',
       fastQuery: true,
       matchTime: 10000,
       actionMaximum: 1,

@@ -140,8 +140,13 @@ export default defineGkdApp({
           preKeys: [1],
           name: '点击[完成]',
           matches: '@[clickable=true][vid="done_button"]',
+          excludeMatches: '[text^="应用未安装" || text*="安装失败"]',
           snapshotUrls: 'https://i.gkd.li/i/25816401',
-          exampleUrls: 'https://e.gkd.li/00166afa-f8cb-4389-87b0-948a5a75f3d5',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/26314449', // 安装失败停止点击
+          exampleUrls: [
+            'https://e.gkd.li/00166afa-f8cb-4389-87b0-948a5a75f3d5',
+            'https://e.gkd.li/e335f324-0d13-4023-8640-d6d03d8f9250', // 安装失败停止点击
+          ],
         },
       ],
     },

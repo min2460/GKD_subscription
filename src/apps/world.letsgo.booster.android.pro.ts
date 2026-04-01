@@ -29,5 +29,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '局部广告-顶部横幅',
+      desc: 'x掉',
+      rules: [
+        {
+          key: 0,
+          name: '①横幅更新提示',
+          fastQuery: true,
+          activityIds: 'world.letsgo.booster.android.pages.home.HomeActivity',
+          matches: '[vid="close_update_tip"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/26395787',
+        },
+      ],
+    },
   ],
 });

@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## ⚠️在提交问题之前，请您务必确认以下信息，否则你的issue可能会根据情况直接被关闭❗❗❗
+        ## ⚠️ 在提交 issue 之前，请您务必确认以下信息，否则你的 issue 可能会被关闭❗❗❗
 
         > [!WARNING]
         > - 不要提供截图，截图对编写规则**没有任何作用❗**
@@ -14,7 +14,7 @@ body:
   - type: checkboxes
     id: check-group
     attributes:
-      label: 📋 请确认以下检查项
+      label: ✅ 请核对以下内容
       options:
         - label: 我已阅读 [不予适配情况合集](https://github.com/Lin-arm/GKD_subscription/issues/17) 并确认没有提及我想要适配的情况
           required: true
@@ -37,7 +37,7 @@ body:
     id: feature-description
     attributes:
       label: |
-        📸需要适配界面的快照
+        📸 需要适配界面的快照
       description: |
         快照是一个 zip 文件，快照链接是类似 "https://i.gkd.li/i/XXXXXXXX" 的文本，按照如下方式可获得快照信息
 

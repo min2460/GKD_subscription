@@ -7,7 +7,8 @@ export const blackListAppIDs: string[] = [
   'com.tencent.wetype', // 微信输入法
   'com.tmri.app.main', // 交管12123
   'com.github.android', // GitHub
-  'org.telegram.messenger', // Telegram
+  'org.telegram.messenger', // Telegram (Google Play版)
+  'org.telegram.messenger.web', // Telegram
   'org.telegram.plus', // Plus Messenger
   'com.twitter.android', // X(推特)
   'com.aistra.hail', // 雹
@@ -231,6 +232,7 @@ export const blackListAppIDs: string[] = [
   'com.binance.dev', // 币安
   'com.superproductivity.superproductivity', // Super Productivity
   'org.isoron.uhabits', // Loop Habits 开屏广告误触 https://i.gkd.li/i/25312905
+  'com.aurora.store', // Aurora Store 更新提示误触 https://i.gkd.li/i/26601169
 
   'com.canghai.haoka',
   'com.xy.td',

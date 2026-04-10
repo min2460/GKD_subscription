@@ -1,5 +1,5 @@
 {
-  "404": [
+  "667": [
     {
       "name": "开屏广告1",
       "order": 100,
@@ -16,7 +16,7 @@
       "selector": "@View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0] <n FrameLayout[childCount>2][text=null][desc=null] >(n+6) [text*=\"第三方应用\" || text*=\"扭动手机\" || text*=\"点击或上滑\" || text*=\"省钱好物\" || text*=\"扭一扭\"][visibleToUser=true]"
     },
     {
-      "name": "字节开屏2",
+      "name": "字节开屏2(无快查)",
       "order": 97,
       "selector": "FrameLayout > FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]"
     },
@@ -58,7 +58,7 @@
     {
       "name": "青少年模式2",
       "order": 78,
-      "selector": "[text*=\"知道了\" || text*=\"我已知晓\" || text*=\"已满\" || text*=\"不再提醒\"][text.length<8][childCount=0][visibleToUser=true]"
+      "selector": "[text*=\"知道了\" || text*=\"我已知晓\" || text*=\"已满\" || text*=\"不再提醒\" || text=\"关闭\"][text.length<8][childCount=0][visibleToUser=true]"
     },
     {
       "name": "字节SDK-1",
@@ -101,7 +101,7 @@
       "selector": "@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null] - FrameLayout[childCount>2] >3 [text^=\"立即\" || text$=\"应用\" || text=\"了解更多\" || text=\"查看详情\"]"
     },
     {
-      "name": "腾讯SDK5",
+      "name": "腾讯SDK-5",
       "order": 55,
       "selector": "@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null][parent.childCount>3] - FrameLayout >2 [text$=\"第三方应用\"]"
     },

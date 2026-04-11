@@ -7,13 +7,14 @@ export default defineGkdApp({
     {
       key: 1,
       name: '全屏广告',
+      fastQuery: true,
       rules: [
         {
           key: 0,
           name: '形式1',
           activityIds: 'com.google.android.gms.ads.AdActivity',
           matches:
-            '@Button[index=parent.childCount.minus(1)][clickable=true] < * <(2,3) View <n [id="mys-content"] <<10  [id="android:id/content"]',
+            '@Button[clickable=true] < [index=parent.childCount.minus(1)] <n View[childCount>1] <n [id="mys-content"] <<10  [id="android:id/content"]',
           snapshotUrls: [
             'https://i.gkd.li/i/26159508',
             'https://i.gkd.li/i/26159509',
@@ -27,10 +28,9 @@ export default defineGkdApp({
         {
           key: 1,
           name: '形式2',
-          fastQuery: true,
           activityIds: 'com.google.android.gms.ads.AdActivity',
           matches:
-            '[desc="Interstitial close button"][visibleToUser=true] < @FrameLayout[index=parent.childCount.minus(1)] <2 * < [id="android:id/content"]',
+            '[desc="Interstitial close button"][visibleToUser=true] < @FrameLayout <2 [childCount=2] < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/26646224',
           exampleUrls: 'https://e.gkd.li/5400ee80-9f09-426e-97b8-2e0e18add6a3',
         },

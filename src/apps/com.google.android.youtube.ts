@@ -173,22 +173,22 @@ export default defineGkdApp({
     {
       key: 9,
       name: '分段广告-播放页广告',
+      fastQuery: true,
+      activityIds:
+        'com.google.android.apps.youtube.app.watchwhile.MainActivity',
       rules: [
         {
           key: 1,
-          fastQuery: true,
-          activityIds:
-            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
           matches:
-            '[vid="layout_container"] >n LinearLayout > GridLayout > [vid="overflow_button"][index=parent.childCount.minus(1)][clickable=true][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/23790199',
+            '[vid="collapsible_ad_cta_overlay_container"] >4 [vid="overflow_button"][clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23790199',
+            'https://i.gkd.li/i/26672553',
+          ],
         },
         {
           key: 2,
           preKeys: [1],
-          fastQuery: true,
-          activityIds:
-            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
           matches:
             '@[clickable=true] >(1,2) [vid="list_item_text"][text="关闭"]',
           snapshotUrls: [

@@ -39,6 +39,7 @@ export default defineGkdApp({
     {
       key: 3,
       name: '分段广告-卡片广告',
+      fastQuery: true,
       activityIds: [
         '.ona.activity.SplashHomeActivity',
         '.ona.activity.VideoDetailActivity',
@@ -49,70 +50,66 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          fastQuery: true,
           matches:
-            '@ImageView[childCount=0][clickable=true][visibleToUser=true] - FrameLayout >4 ViewGroup > [vid="player_sub_title_view"][visibleToUser=true]',
+            '@ImageView[height<74][clickable=true][visibleToUser=true] - FrameLayout >5 [vid="player_sub_title_view"]',
           exampleUrls: 'https://e.gkd.li/d0fb9740-defa-437a-882e-b3c5d6a2d231',
-          snapshotUrls: 'https://i.gkd.li/i/19666783',
+          snapshotUrls: 'https://i.gkd.li/i/19666783', // 顶部轮播图
         },
         {
           key: 1,
-          fastQuery: true,
           matches:
             '[desc="the ad tag"] < @FrameLayout[clickable=true] < RelativeLayout < RelativeLayout +(1,2) * >(4,5) [text*="应用" || text*="立即" || text*="下载" || text*="了解" || text*="查看" || text*="详情" || text="去微信看看"][text.length<6][visibleToUser=true]',
           snapshotUrls: [
-            'https://i.gkd.li/i/19667010',
-            'https://i.gkd.li/i/19667126',
-            'https://i.gkd.li/i/19667028',
-            'https://i.gkd.li/i/19667404',
-            'https://i.gkd.li/i/19667413',
-            'https://i.gkd.li/i/19667494',
-            'https://i.gkd.li/i/19667496',
-            'https://i.gkd.li/i/19667620',
-            'https://i.gkd.li/i/19667647',
-            'https://i.gkd.li/i/21139117',
-            'https://i.gkd.li/i/21152861',
+            'https://i.gkd.li/i/19667010', // 进入应用
+            'https://i.gkd.li/i/19667126', // 立即下载
+            'https://i.gkd.li/i/19667028', // 下载应用
+            'https://i.gkd.li/i/19667404', // 了解详情
+            'https://i.gkd.li/i/19667413', // 了解更多
+            'https://i.gkd.li/i/19667496', // 立即试玩
+            'https://i.gkd.li/i/19667620', // 查看详情
+            'https://i.gkd.li/i/19667647', // 去微信看看
           ],
         },
         {
           key: 2,
-          fastQuery: true,
           matches:
-            '@ImageView[text=null][desc=null][childCount=0][clickable=true][visibleToUser=true][width<250 && height<150] - * >(1,2) [text*="应用" || text*="立即" || text*="下载" || text*="了解" || text*="查看" || text*="详情" || text="去微信看看"]',
+            '@ImageView[text=null][desc=null][clickable=true][width<250 && height<150] - * >(1,2) [text*="应用" || text*="立即" || text*="下载" || text*="了解" || text*="查看" || text*="详情" || text="去微信看看"][text.length<6][visibleToUser=true]',
           snapshotUrls: [
-            'https://i.gkd.li/i/19666328',
-            'https://i.gkd.li/i/19693394',
+            'https://i.gkd.li/i/19666328', // 了解详情
+            'https://i.gkd.li/i/19693394', // 立即下载
+            'https://i.gkd.li/i/21139117', // 下载游戏
           ],
         },
         {
-          key: 3,
-          matches:
-            '[desc="poster_inner_round_cell"] >5 RelativeLayout[childCount=5] > ImageView[clickable=true][childCount=0][visibleToUser=true][index=parent.childCount.minus(1)][width<180 && height<80]',
-          exampleUrls: 'https://e.gkd.li/18c89ee9-fcd5-43eb-805a-ac9e223e3cdc',
-          snapshotUrls: 'https://i.gkd.li/i/21139064',
-        },
-        {
           key: 4,
+          matchRoot: true,
           matches:
-            '@View[clickable=true][childCount=0][visibleToUser=true][width<60 && height<60] -(4,5) [text="广告"]',
+            '@View[clickable=true][width<174][height<174] -(2,4,5) TextView[text="广告" || (text.length>9 && getChild(0).name$="ImageView")] <n ScrollView < View < DetachableComposeView <<(14,16) FrameLayout <(2,4,5) [id="android:id/content"]',
           exampleUrls: 'https://e.gkd.li/1d81db1b-a722-4800-b6b7-4e5edb470984',
           snapshotUrls: [
-            'https://i.gkd.li/i/21139431',
+            // 个人中心页
+            'https://i.gkd.li/i/21139431', // text="广告"
             'https://i.gkd.li/i/21152859',
+            'https://i.gkd.li/i/23599723', // text.length>9 && getChild(0).name$="ImageView"
+            'https://i.gkd.li/i/23625826',
           ],
         },
         {
           key: 5,
+          matchRoot: true,
+          activityIds: '.kmm.VideoDetailKmmActivityBk', // 视频详情页
           matches:
-            'View[childCount=0][width<180 && height<80] < @View[clickable=true][childCount=1][visibleToUser=true] +2 [text*="广告"]',
+            '[text*="广告"] -2 @View[clickable=true][getChild(0).height<90] < View[childCount>2] < * < * < * < ViewFactoryHolder <n View < View[index=parent.childCount.minus(1)] <n [childCount>6] < DetachableComposeView <2 FrameLayout <2 [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/21152960',
         },
         {
           key: 6,
+          matchRoot: true,
           matches:
-            'DetachableComposeView >2 ScrollView > View[childCount=4][visibleToUser=true] > View + TextView[childCount=1][text!=null][getChild(0).width<120][getChild(0).height<80] + View[childCount=1][getChild(0).text!=null] + View[clickable=true][childCount=0]',
+            '@View[clickable=true][width<174][height<174] -2 TextView[text.length>5][getChild(0).height<78] <2 [childCount=4] <n ScrollView < View < DetachableComposeView <<14 FrameLayout <(4,5) [id="android:id/content"]',
           exampleUrls: 'https://e.gkd.li/e4e6aca1-e7cb-4346-980b-638f26f61864',
           snapshotUrls: [
+            // 个人中心页
             'https://i.gkd.li/i/21379340',
             'https://i.gkd.li/i/21410460',
             'https://i.gkd.li/i/21410716',
@@ -120,10 +117,11 @@ export default defineGkdApp({
         },
         {
           key: 7,
-          fastQuery: true,
+          matchRoot: true,
           matches:
-            '@View[clickable=true][childCount=0][visibleToUser=true] <(1,2,3) View[checkable=true] <<4 [name*="KMMChannelNormalFragment"] < FrameLayout <(2,3,4) ViewPager <<4 FrameLayout <(1,2) FrameLayout <(2,3,5) [id="android:id/content"]',
+            '@View[clickable=true][visibleToUser=true][width<174 && height<174] <(1,2,3) View[checkable=true] <<4 [name*="KMMChannelNormalFragment"] < FrameLayout <(2,3,4) ViewPager <<4 FrameLayout <(1,2) FrameLayout <(2,3,5) [id="android:id/content"]',
           snapshotUrls: [
+            // 都是顶部轮播图
             'https://i.gkd.li/i/23431044',
             'https://i.gkd.li/i/24339351',
             'https://i.gkd.li/i/24588850',
@@ -133,26 +131,21 @@ export default defineGkdApp({
         },
         {
           key: 8,
-          fastQuery: true,
+          matchRoot: true,
           matches:
-            '@ImageView[clickable=true][visibleToUser=true][width<250 && height<150] <n RelativeLayout < RelativeLayout < RecyclerView < RelativeLayout < RelativeLayout < LinearLayout[desc="poster_inner_round_cell"] < RecyclerView <2 ViewGroup <2 FrameLayout <2 ScrollView <(2,3) RelativeLayout < ViewPager < FrameLayout < FrameLayout < FrameLayout < FrameLayout <(1,2) FrameLayout <2 [id="android:id/content"]',
+            '@ImageView[clickable=true][visibleToUser=true][width<250 && height<150] <n RelativeLayout <<6 RecyclerView <(1,2) ViewGroup <2 FrameLayout <2 ScrollView <(2,3) [desc*="page_home_channel"] <<(6,7) FrameLayout <(2,4) [id="android:id/content"]',
           snapshotUrls: [
+            // 都是顶部轮播图
             'https://i.gkd.li/i/23625987',
             'https://i.gkd.li/i/23625990',
             'https://i.gkd.li/i/24077457',
+            'https://i.gkd.li/i/21139064',
           ],
-        },
-        {
-          key: 9,
-          matches:
-            'DetachableComposeView >2 ScrollView > View[childCount=1][getChild(0).text.length>0] + View[clickable=true][childCount=0][visibleToUser=true][width=height]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/23599723',
-            'https://i.gkd.li/i/23625826',
-          ],
+          exampleUrls: 'https://e.gkd.li/18c89ee9-fcd5-43eb-805a-ac9e223e3cdc',
         },
         {
           key: 10,
+          fastQuery: false,
           matches:
             '@View[clickable=true] <4 View[childCount>4] + [text="广告"][visibleToUser=true]',
           snapshotUrls: [
@@ -160,34 +153,45 @@ export default defineGkdApp({
             'https://i.gkd.li/i/26660624',
           ],
         },
+
+        // 第二段
         {
           preKeys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
           key: 50,
-          fastQuery: true,
-          anyMatches: [
-            '[text="直接关闭"][visibleToUser=true]',
-            '@View[clickable=true] > [visibleToUser=true][text="直接关闭"]',
-          ],
+          matches: '[text="直接关闭"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/19667198',
             'https://i.gkd.li/i/19667244',
             'https://i.gkd.li/i/21139034',
-            'https://i.gkd.li/i/24715184', // 不能快速查询
           ],
         },
         {
-          preKeys: [50],
-          fastQuery: true,
-          anyMatches: [
-            '[text="确认"][visibleToUser=true]',
-            '@View[clickable=true] > [visibleToUser=true][text="确认"]',
-          ],
+          preKeys: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          key: 51,
+          matchRoot: true,
+          anyMatches:
+            '[text="直接关闭"] < @View[clickable=true] <n View < View < View < View < ViewGroup < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/24715184',
+        },
+
+        // 第三段
+        {
+          key: 100,
+          preKeys: [50, 51],
+          matches: '[text="确认"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/19667102',
             'https://i.gkd.li/i/19666759',
             'https://i.gkd.li/i/21152903',
-            'https://i.gkd.li/i/24715184', // 不能快速查询
           ],
+        },
+        {
+          key: 101,
+          preKeys: [50, 51],
+          matchRoot: true,
+          matches:
+            '[text="确认"] < @View[clickable=true] <n View < View < View < View < ViewGroup < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/24715184',
         },
       ],
     },

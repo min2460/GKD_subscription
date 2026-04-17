@@ -16,7 +16,7 @@ export default defineGkdApp({
             'com.bytedance.polaris.impl.view.BulletSingleContainerActivity',
           ],
           matches:
-            'FlattenUIImage[clickable=true] -(1,2) FlattenUIText[text="开心收下" || text="前往领取"][visibleToUser=true]',
+            '@FlattenUIImage[clickable=true] -(1,2) FlattenUIText[text="开心收下" || text="前往领取"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/25246321',
             'https://i.gkd.li/i/25246625',

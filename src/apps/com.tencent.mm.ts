@@ -332,6 +332,11 @@ export default defineGkdApp({
       priorityTime: 10000,
       activityIds: [
         '.plugin.appbrand.ui.AppBrandUI',
+        '.plugin.appbrand.ui.AppBrandUI00',
+        '.plugin.appbrand.ui.AppBrandUI01',
+        '.plugin.appbrand.ui.AppBrandUI02',
+        '.plugin.appbrand.ui.AppBrandUI03',
+        '.plugin.appbrand.ui.AppBrandUI04',
         '.plugin.appbrand.launching.AppBrandLaunchProxyUI',
       ],
       rules: [

@@ -761,7 +761,14 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: '.plugin.appbrand.ui.AppBrandUI',
+          activityIds: [
+            '.plugin.appbrand.ui.AppBrandUI',
+            '.plugin.appbrand.ui.AppBrandUI00',
+            '.plugin.appbrand.ui.AppBrandUI01',
+            '.plugin.appbrand.ui.AppBrandUI02',
+            '.plugin.appbrand.ui.AppBrandUI03',
+            '.plugin.appbrand.ui.AppBrandUI04',
+          ],
           excludeMatches: '[text="跳过" || text="跳過"][visibleToUser=true]', // 防止提前触发
           matches:
             '@ImageView[visibleToUser=true][childCount=0][text=null] < FrameLayout[childCount=1] < FrameLayout[childCount=1] <2 FrameLayout[childCount=2] - FrameLayout >4 [text="广告"]',

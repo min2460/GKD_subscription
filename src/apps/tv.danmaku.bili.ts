@@ -776,5 +776,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 32,
+      name: '全屏广告-哔哩漫游X使用说明',
+      desc: '自动点击[了解]',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: '[text="了解"][id="android:id/button2"]',
+          snapshotUrls: 'https://i.gkd.li/i/1776521087909',
+        },
+      ],
+    },
   ],
 });

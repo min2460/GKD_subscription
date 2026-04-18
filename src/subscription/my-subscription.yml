@@ -1,0 +1,17 @@
+﻿# GKD 个性化订阅配置
+# 生成时间: 2026-04-18 21:09:44
+# 用户: min2460
+
+id: min2460.gkd.subscription
+name: min2460 的个性化 GKD 订阅
+version: 1
+author: min2460
+supportUri: https://github.com/min2460/GKD_subscription/issues
+
+# 订阅说明
+description: |
+  基于 Lin-arm/GKD_subscription Fork 的个性化广告跳过规则订阅
+  规则涵盖常用 Android 应用的开屏广告、弹窗广告自动跳过
+
+# 规则来源
+apps: []

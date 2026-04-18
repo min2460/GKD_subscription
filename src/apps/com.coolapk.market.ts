@@ -103,6 +103,14 @@ export default defineGkdApp({
           ],
         },
         {
+          preKeys: [0],
+          key: 3,
+          matches: '[text="虚假欺诈"][clickable=true][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/26328668', // 这里之后需要根据实际情况更新快照
+          ],
+        },
+        {
           preKeys: [0, 1], // 疑似酷安旧版本bug，点击不感兴趣后会再出现一个弹窗
           key: 2,
           matches: '[text="不感兴趣"][clickable=true][visibleToUser=true]',

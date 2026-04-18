@@ -22,6 +22,12 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/20903066',
         },
         {
+          key: 2,
+          fastQuery: true,
+          matches: '[text*="跳过广告"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/1776522905223',
+        },
+        {
           key: 1,
           position: {
             left: 'width * 0.8759',

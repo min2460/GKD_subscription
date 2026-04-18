@@ -9,13 +9,14 @@ export default defineGkdApp({
       name: '开屏广告', // 该软件会屏蔽无障碍事件，需使用坐标点击方式并在高级设置里开启[启用优化]才能跳过
       desc: '该规则需要在高级设置中开启[启用优化]才能生效',
       matchTime: 10000,
-      actionMaximum: 1,
+      // actionMaximum: 1,
       resetMatch: 'app',
       priorityTime: 10000,
       rules: [
         {
           fastQuery: true,
           action: 'clickCenter',
+          actionCd: 500,
           matches: '[vid="homepage_advert_pb"]',
           exampleUrls:
             'https://m.gkd.li/57941037/6680a0b8-0796-4165-88fc-1f16cd6c67dd',

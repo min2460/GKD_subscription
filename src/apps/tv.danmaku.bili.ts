@@ -780,7 +780,6 @@ export default defineGkdApp({
       key: 32,
       name: '全屏广告-哔哩漫游X使用说明',
       desc: '自动点击[了解]',
-      fastQuery: true,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [

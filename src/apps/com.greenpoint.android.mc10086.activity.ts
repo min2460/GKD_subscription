@@ -63,6 +63,16 @@ export default defineGkdApp({
           matches: '[vid="ad_image"] < RelativeLayout + [vid="close_btn"]',
           snapshotUrls: 'https://i.gkd.li/i/12662361',
         },
+        {
+          key: 1,
+          matches:
+            '@ViewGroup[childCount=2][left>100][top>500][width>600][height>700] > ViewGroup[clickable=true][width>600][height>700]',
+          position: {
+            left: 'width * 0.8213',
+            top: 'width * 0.6296',
+          },
+          snapshotUrls: 'https://i.gkd.li/i/1776554311061',
+        },
       ],
     },
     {

@@ -27,8 +27,14 @@ export default defineGkdApp({
           key: 0,
           fastQuery: true,
           activityIds: 'com.yek.android.kfc.activitys.activity.HomeActivity', // 通常在首页
-          matches: '[id="com.yek.android.kfc.activitys:id/common_iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/1776522880277',
+          matches: [
+            '[id="com.yek.android.kfc.activitys:id/common_iv_close"]',
+            'ViewGroup[childCount=2] > [name="android.view.View"][top<bottom][width<height]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/1776522880277',
+            'https://i.gkd.li/i/1776554311061',
+          ],
         },
       ],
     },
